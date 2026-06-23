@@ -1,0 +1,80 @@
+Feature: Tests for PR: PR-D6D336C1
+
+  @api @regression
+  Scenario: Validate DriverLogonCardTableColumnDefinitions API response
+    Given the DriverLogonCardTableColumnDefinitions API is available
+    When I send a valid request to the API
+    Then I should receive a successful response with the expected data structure
+
+  @ui @regression
+  Scenario: Verify DateTimeLogonCell UI rendering
+    Given the DateTimeLogonCell component is displayed on the UI
+    When the component is loaded with valid data
+    Then the DateTimeLogonCell should render the correct date and time format
+
+  @api @regression
+  Scenario: Validate DateTimeLogonCell API response
+    Given the DateTimeLogonCell API is available
+    When I send a valid request to the API
+    Then I should receive a successful response with the expected date and time data
+
+  @api @regression
+  Scenario: Validate DriverCell API response
+    Given the DriverCell API is available
+    When I send a valid request to the API
+    Then I should receive a successful response with the expected driver information
+
+  @api @regression
+  Scenario: Validate LocationCell API response
+    Given the LocationCell API is available
+    When I send a valid request to the API
+    Then I should receive a successful response with the expected location data
+
+  @api @regression
+  Scenario: Validate StatusCell API response
+    Given the StatusCell API is available
+    When I send a valid request to the API
+    Then I should receive a successful response with the expected status information
+
+  @api @regression
+  Scenario: Validate DataRetention API response
+    Given the DataRetention API is available
+    When I send a valid request to the API
+    Then I should receive a successful response with the expected retention policy data
+
+  @api @regression
+  Scenario: Validate DataRetentionPeriodUpdateModal API response
+    Given the DataRetentionPeriodUpdateModal API is available
+    When I send a valid request to update the retention period
+    Then the API should successfully update the retention period and return a confirmation
+
+  @api @regression
+  Scenario: Validate OfflineNotifications API response
+    Given the OfflineNotifications API is available
+    When I send a valid request to the API
+    Then I should receive a successful response with the expected offline notification data
+
+  @ui @regression
+  Scenario: Verify api.spec UI functionality
+    Given the UI component for api.spec is displayed
+    When the component is loaded with valid data
+    Then the UI should function as expected and display the correct information
+
+  @api @regression
+  Scenario: Validate api API response
+    Given the api endpoint is available
+    When I send a valid request to the API
+    Then I should receive a successful response with the expected data
+
+  @api @regression
+  Scenario: Validate SettingsToggle API response
+    Given the SettingsToggle API is available
+    When I send a valid request to toggle a setting
+    Then the API should successfully update the setting and return the updated value
+
+  @api @regression
+  Scenario: Validate types API response
+    Given the types API is available
+    When I send a valid request to the API
+    Then I should receive a successful response with the expected type definitions
+
